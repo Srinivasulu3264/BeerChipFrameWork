@@ -23,7 +23,7 @@ public class BeerChipViewController: UIViewController {
         
         beerchipFrameWorkVC = viewController
         
-        let mainView = UIView(frame:CGRect(x:0 , y:70, width: UIScreen.main.bounds.width , height: 70))
+        let mainView = UIView(frame:CGRect(x:0 , y:250, width: UIScreen.main.bounds.width , height: 70))
         mainView.backgroundColor = .lightGray
         self.view.addSubview(mainView)
 
@@ -44,7 +44,7 @@ public class BeerChipViewController: UIViewController {
 
     @objc func gotoWebView ()  {
         let  webVC = WebViewController()
-        self.navigationController?.pushViewController(webVC , animated: true)
+        beerchipFrameWorkVC.navigationController?.pushViewController(webVC , animated: true)
     }
     
     @objc func showTheAlertMessage() {
@@ -62,7 +62,7 @@ public class BeerChipViewController: UIViewController {
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
         
-        self.present(alertController, animated: true, completion: nil)
+        beerchipFrameWorkVC.present(alertController, animated: true, completion: nil)
     }
 
 }
