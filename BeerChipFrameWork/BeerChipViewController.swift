@@ -19,13 +19,13 @@ public class BeerChipViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-      public func openBeerChipFrameWork(viewController: UIViewController){
+    public func openBeerChipFrameWork(viewController: UIViewController){
         
         beerchipFrameWorkVC = viewController
         
         let mainView = UIView(frame:CGRect(x:0 , y:250, width: UIScreen.main.bounds.width , height: 70))
         mainView.backgroundColor = .lightGray
-        self.view.addSubview(mainView)
+        viewController.view.addSubview(mainView)
 
         let webViewButton = UIButton(frame: CGRect(x: 20 ,y: 15, width: 150, height: 40))
         webViewButton.setTitle("Open WebView", for: .normal)
@@ -40,9 +40,11 @@ public class BeerChipViewController: UIViewController {
         alertButton.setTitleColor(.white, for: .normal)
         alertButton.addTarget(self, action: #selector(showTheAlertMessage), for: .touchUpInside)
         mainView.addSubview(alertButton)
-   }
+    
+    }
 
     @objc func gotoWebView ()  {
+        
         let  webVC = WebViewController()
         beerchipFrameWorkVC.navigationController?.pushViewController(webVC , animated: true)
     }
@@ -64,7 +66,6 @@ public class BeerChipViewController: UIViewController {
         
         beerchipFrameWorkVC.present(alertController, animated: true, completion: nil)
     }
-
 }
 
 

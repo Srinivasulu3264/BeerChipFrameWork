@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.name         = "BeerChipFrameWork"
 
-  s.version      = "0.0.4"
+  s.version      = "0.0.7"
 
   s.summary      = "BeerChipFrameWork displays a webView and a AlertMessage"
 
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
 
 
-  s.source       = { :git => "https://github.com/Srinivasulu3264/BeerChipFrameWork.git", :tag => "0.0.4" }
+  s.source       = { :git => "https://github.com/Srinivasulu3264/BeerChipFrameWork.git", :tag => "0.0.7" }
 
 
   s.source_files  = "BeerChipFrameWork", "BeerChipFrameWork/**/*.{h,m,swift}"
